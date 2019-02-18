@@ -32,26 +32,26 @@ function processInstructions(initialPos, drivingInstructions) {
       case "N":
         if (checkBoundaries(nextPos[1] + 1)) {
           nextPos[1] = nextPos[1] + 1;
-          cleanPos = cleanPos.concat(nextPos);
+          cleanPos = cleanPos.concat(cleanPos, nextPos);
         }
         break;
       case "E":
         if (checkBoundaries(nextPos[0] + 1)) {
           nextPos[0] = nextPos[0] + 1;
-          cleanPos = cleanPos.concat(nextPos);
+          cleanPos = cleanPos.concat(cleanPos, nextPos);
         }
         break;
       case "S":
         if (checkBoundaries(nextPos[1] - 1)) {
           nextPos[1] = nextPos[1] - 1;
-          cleanPos = cleanPos.concat(nextPos);
+          cleanPos = cleanPos.concat(cleanPos, nextPos);
         }
         break;
       case "W":
         if (checkBoundaries(nextPos[0] - 1)) {
           nextPos[0] = nextPos[0] - 1;
 
-          cleanPos = cleanPos.concat(nextPos);
+          cleanPos = cleanPos.concat(cleanPos, nextPos);
         }
         break;
     }
